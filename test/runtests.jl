@@ -12,7 +12,7 @@ for fname in cppfiles
 	@testset "$(fname)" begin
 		mktempdir() do d
 			exec = joinpath(d, basename(first(splitext(fname))))
-			run(`g++ -O2 -Xpreprocessor -fopenmp -std=c++20 -DUNIT_TEST $(fname) -o $(exec)`)
+			run(`g++ -O2 -std=c++20 -DUNIT_TEST $(fname) -o $(exec)`)
 			o = read(`$(exec)`, String)
 			reftxt = "$(first(splitext(basename(fname)))).txt"
 			@test_reference reftxt o
