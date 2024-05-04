@@ -50,10 +50,10 @@ std::int32_t my_doubletoint(double x)
 std::optional<std::pair<std::int32_t, std::int32_t>> get_answer()
 {
     #ifdef TEST
+        std::mt19937 engine(42);
+    #else
         std::random_device seed_gen;
         std::mt19937 engine(seed_gen());
-    #else
-        std::mt19937 engine(42);
     #endif
 
     std::uniform_real_distribution<double> dist(0.0, boost::math::constants::pi<double>() * 0.5);

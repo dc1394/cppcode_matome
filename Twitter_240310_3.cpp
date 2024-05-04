@@ -25,12 +25,12 @@ namespace {
 double get_answer()
 {
     #ifdef TEST
+        std::mt19937 engine(42);
+    #else
         std::random_device seed_gen;
         std::mt19937 engine(seed_gen());
-    #else
-        std::mt19937 engine(42);
     #endif
-        
+
     auto cnt = 0;
 
     for (auto i = 0; i < N; i++) {

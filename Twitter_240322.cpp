@@ -31,8 +31,13 @@ std::pair<double, double> get_answer()
 
 double montecarlo(bool b)
 {
-    std::random_device seed_gen;
-    std::mt19937       engine(seed_gen());
+
+    #ifdef TEST
+        std::mt19937 engine(42);
+    #else
+        std::random_device seed_gen;
+        std::mt19937 engine(seed_gen());
+    #endif
     std::uniform_int_distribution<std::int32_t> dist(0, 1);
 
     auto cnt = 0;
