@@ -32,10 +32,10 @@ double get_answer()
 double montecarlo()
 {
     #ifdef TEST
+        std::mt19937 engine(42);
+    #else
         std::random_device seed_gen;
         std::mt19937 engine(seed_gen());
-    #else
-        std::mt19937 engine(42);
     #endif
     std::uniform_int_distribution<std::int32_t> dist(1, 6);
 
