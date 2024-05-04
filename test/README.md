@@ -6,7 +6,7 @@
 $ julia --project -e 'using Pkg; Pkg.instantiate()'
 ```
 
-## Runings tests
+## Running tests
 
 ```sh
 $ julia --project runtests.jl
