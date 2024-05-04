@@ -1,3 +1,5 @@
+// 鈴木伸介@数学アカデミー（@suzzukes）さん作の問題の解答
+// https://x.com/dc1394/status/1781980326400868610
 #include <algorithm>  // for std::copy, std::fill_n, std::find_if
 #include <array>      // for std::array
 #include <cstdint>    // for std::int32_t
