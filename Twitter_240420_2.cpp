@@ -123,7 +123,9 @@ std::pair<cpp_dec_float_170_64exp, cpp_dec_float_170_64exp> get_answer()
 
     auto const fun = [&integ, &constant](cpp_dec_float_170_64exp const & max) {
         auto const answer = integ.integrate(cpp_dec_float_170_64exp(DELTA), cpp_dec_float_170_64exp(max));
-        return answer - constant;
+        auto const diff = answer - constant;
+        //std::cout << "diff = " << diff << std::endl;
+        return diff;
     };
 
     boost::uintmax_t max_iter = 1000;
@@ -131,7 +133,6 @@ std::pair<cpp_dec_float_170_64exp, cpp_dec_float_170_64exp> get_answer()
         fun, cpp_dec_float_170_64exp(std::string("2.26274649749316953701833503496598089204466788")),
         cpp_dec_float_170_64exp(std::string("2.26274649749316953701833503496598089204466789")),
         boost::math::tools::eps_tolerance<cpp_dec_float_170_64exp>(150), max_iter);
-
     auto const answer =
         integ.integrate(cpp_dec_float_170_64exp(DELTA), (res.first + res.second) * cpp_dec_float_170_64exp(0.5));
 
