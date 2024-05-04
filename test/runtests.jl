@@ -8,6 +8,7 @@ end
 for fname in cppfiles
 	# omp.h
 	basename(fname) == "Twitter_240420_2.cpp" && continue
+	basename(fname) == "Twitter_240430.cpp" && continue
 
 	@testset "$(fname)" begin
 		mktempdir() do d
