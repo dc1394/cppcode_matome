@@ -36,8 +36,8 @@ std::string get_answer()
         auto const days_in_month = static_cast<std::uint32_t>(ymdlast.day());
         auto day_cnt = 0;
         for (auto i = 1U; i <= days_in_month; i++) {
-            auto ymdtmp = ch::year_month_day(ymd.year(), ymd.month(), ch::day(i));
-            auto ymw    = ch::year_month_weekday(ch::sys_days(ymdtmp));
+            auto const ymdtmp = ch::year_month_day(ymd.year(), ymd.month(), ch::day(i));
+            auto const ymw    = ch::year_month_weekday(ch::sys_days(ymdtmp));
             if (ymw.weekday() == ch::Tuesday) {
                 day_cnt += i;
             }
