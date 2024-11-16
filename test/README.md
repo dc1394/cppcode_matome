@@ -5,7 +5,7 @@
 Install Julia using the following command:
 
 ```sh
-$ curl -fsSL https://install.julialang.org | sh -- yes
+$ curl -fsSL https://install.julialang.org | sh -- --yes
 $ juliaup add lts
 $ julia +lts --version
 julia version 1.10.6
