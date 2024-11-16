@@ -23,6 +23,13 @@ $ julia +lts --project -e 'using Pkg; Pkg.instantiate()'
 $ julia +lts --project runtests.jl
 ```
 
+On Apple silicon device, You may want to add `CPATH=/opt/homebrew/include/`. Namely:
+
+```sh
+$ brew install boost
+$ CPATH=/opt/homebrew/include/ julia +lts --project runtests.jl
+```
+
 ## Creating a new output txt for a new problem
 
 ```sh
