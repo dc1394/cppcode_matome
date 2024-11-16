@@ -1,6 +1,6 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.2"
+julia_version = "1.10.6"
 manifest_format = "2.0"
 project_hash = "f3df9d67686c98cd2526b5dd075fcd510ccf382c"
 
@@ -16,15 +16,21 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.ColorTypes]]
 deps = ["FixedPointNumbers", "Random"]
-git-tree-sha1 = "b10d0b65641d57b8b4d5e234446582de5047050d"
+git-tree-sha1 = "c7acce7a7e1078a20a285211dd73cd3941a871d6"
 uuid = "3da002f7-5984-5a60-b8a6-cbb66c0b333f"
-version = "0.11.5"
+version = "0.12.0"
+
+    [deps.ColorTypes.extensions]
+    StyledStringsExt = "StyledStrings"
+
+    [deps.ColorTypes.weakdeps]
+    StyledStrings = "f489334b-da3d-4c2e-b8f0-e476e12c162b"
 
 [[deps.ColorVectorSpace]]
 deps = ["ColorTypes", "FixedPointNumbers", "LinearAlgebra", "Requires", "Statistics", "TensorCore"]
-git-tree-sha1 = "a1f44953f2382ebb937d60dafbe2deea4bd23249"
+git-tree-sha1 = "8b3b6f87ce8f65a2b4f857528fd8d70086cd72b1"
 uuid = "c3611d14-8923-5661-9e6a-0046d554d3a4"
-version = "0.10.0"
+version = "0.11.0"
 
     [deps.ColorVectorSpace.extensions]
     SpecialFunctionsExt = "SpecialFunctions"
@@ -34,14 +40,14 @@ version = "0.10.0"
 
 [[deps.Colors]]
 deps = ["ColorTypes", "FixedPointNumbers", "Reexport"]
-git-tree-sha1 = "fc08e5930ee9a4e03f84bfb5211cb54e7769758a"
+git-tree-sha1 = "64e15186f0aa277e174aa81798f7eb8598e0157e"
 uuid = "5ae59095-9a9b-59fe-a467-6f913c188581"
-version = "0.12.10"
+version = "0.13.0"
 
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.1.0+0"
+version = "1.1.1+0"
 
 [[deps.Crayons]]
 git-tree-sha1 = "249fe38abf76d48563e2f4556bebd215aa317e15"
@@ -59,9 +65,9 @@ version = "1.2.0"
 
 [[deps.Distances]]
 deps = ["LinearAlgebra", "Statistics", "StatsAPI"]
-git-tree-sha1 = "66c4c81f259586e8f002eacebc177e1fb06363b0"
+git-tree-sha1 = "c7e3a542b999843086e2f29dac96a618c105be1d"
 uuid = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
-version = "0.10.11"
+version = "0.10.12"
 
     [deps.Distances.extensions]
     DistancesChainRulesCoreExt = "ChainRulesCore"
@@ -78,18 +84,18 @@ version = "1.6.0"
 
 [[deps.FileIO]]
 deps = ["Pkg", "Requires", "UUIDs"]
-git-tree-sha1 = "82d8afa92ecf4b52d78d869f038ebfb881267322"
+git-tree-sha1 = "91e0e5c68d02bcdaae76d3c8ceb4361e8f28d2e9"
 uuid = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
-version = "1.16.3"
+version = "1.16.5"
 
 [[deps.FileWatching]]
 uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
 
 [[deps.FixedPointNumbers]]
 deps = ["Statistics"]
-git-tree-sha1 = "335bfdceacc84c5cdf16aadc768aa5ddfc5383cc"
+git-tree-sha1 = "05882d6995ae5c12bb5f36dd2ed3f61c98cbb172"
 uuid = "53c48c17-4a7d-5ca2-90c5-79b7896eea93"
-version = "0.8.4"
+version = "0.8.5"
 
 [[deps.ImageBase]]
 deps = ["ImageCore", "Reexport"]
@@ -99,9 +105,9 @@ version = "0.1.7"
 
 [[deps.ImageCore]]
 deps = ["ColorVectorSpace", "Colors", "FixedPointNumbers", "MappedArrays", "MosaicViews", "OffsetArrays", "PaddedViews", "PrecompileTools", "Reexport"]
-git-tree-sha1 = "b2a7eaa169c13f5bcae8131a83bc30eff8f71be0"
+git-tree-sha1 = "8c193230235bbcee22c8066b0374f63b5683c2d3"
 uuid = "a09fc81d-aa75-5fe9-8630-4744c3626534"
-version = "0.10.2"
+version = "0.10.5"
 
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
@@ -175,9 +181,9 @@ uuid = "ca575930-c2e3-43a9-ace4-1e988b2c1908"
 version = "1.2.0"
 
 [[deps.OffsetArrays]]
-git-tree-sha1 = "e64b4f5ea6b7389f6f046d13d4896a8f9c1ba71e"
+git-tree-sha1 = "1a27764e945a152f7ca7efa04de513d473e9542e"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
-version = "1.14.0"
+version = "1.14.1"
 
     [deps.OffsetArrays.extensions]
     OffsetArraysAdaptExt = "Adapt"
@@ -232,9 +238,9 @@ version = "1.2.2"
 
 [[deps.ReferenceTests]]
 deps = ["Colors", "DeepDiffs", "Distances", "FileIO", "ImageCore", "LazyModules", "Random", "SHA", "Test", "XTermColors"]
-git-tree-sha1 = "ce6661add3d5a76c6e2e2c56f14b41a50577276c"
+git-tree-sha1 = "1e91719bd0ba9735132f68b06f85a084563fdf7d"
 uuid = "324d217c-45ce-50fc-942e-d289b448e8cf"
-version = "0.10.4"
+version = "0.10.5"
 
 [[deps.Requires]]
 deps = ["UUIDs"]
@@ -320,7 +326,7 @@ version = "1.2.13+1"
 [[deps.libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.8.0+1"
+version = "5.11.0+0"
 
 [[deps.nghttp2_jll]]
 deps = ["Artifacts", "Libdl"]

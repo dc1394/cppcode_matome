@@ -21,8 +21,12 @@ int main()
 namespace {
 double get_answer()
 {
-    std::random_device                          seed_gen;
-    std::mt19937                                engine(seed_gen());
+    #ifdef TEST
+        std::mt19937 engine(42);
+    #else
+        std::random_device seed_gen;
+        std::mt19937 engine(seed_gen());
+    #endif
     std::uniform_int_distribution<std::int32_t> dist(1, 6);
 
     auto cnt = 0;

@@ -7,7 +7,7 @@
 #include <random>    // for std::random_device, std::mt19937, std::uniform_int_distribution
 
 namespace {
-static auto constexpr N = 20000000;
+static auto constexpr N = 30000000;
 
 double get_answer();
 }  // namespace
