@@ -88,8 +88,13 @@ std::vector<Card> create_deck()
 std::array<std::int64_t, 4> simulate_game(std::vector<Card> const & deck)
 {
     std::array<std::int64_t, 4>     results{};
-    std::random_device              rd;
-    std::mt19937                    gen(rd());
+
+    #ifdef TEST
+        std::mt19937 gen(42);
+    #else
+        std::random_device              rd;
+        std::mt19937                    gen(rd());
+    #endif
     std::uniform_int_distribution<> dis(0, deck.size() - 1);
 
     for (auto i = 0; i < NUM_SIMULATIONS; ++i) {
