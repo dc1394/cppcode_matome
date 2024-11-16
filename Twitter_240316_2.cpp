@@ -69,8 +69,12 @@ int main()
 namespace {
 MyRand::MyRand() : dist_(1, 6)
 {
-    std::random_device seed_gen;
-    engine_ = std::mt19937(seed_gen());
+    #ifdef TEST
+        std::mt19937 engine(42);
+    #else
+        std::random_device seed_gen;
+        std::mt19937 engine(seed_gen());
+    #endif
 }
 
 std::tuple<double, double, std::int32_t> getresult(std::vector<std::int32_t> const & vec,
