@@ -38,8 +38,12 @@ int main()
 namespace {
 MyRand::MyRand()
 {
-    std::random_device seed_gen;
-    engine_ = std::mt19937(seed_gen());
+    #ifdef TEST
+        engine_ = std::mt19937(42);
+    #else
+        std::random_device seed_gen;
+        engine_ = std::mt19937(seed_gen());
+    #endif
 }
 
 double get_answer()
